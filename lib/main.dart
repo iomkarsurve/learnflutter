@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.email),
               title: Text("Email"),
-              subtitle: Text("iomkarsurve@gmail.com"),
+              subtitle: Text("ABCe@gmail.com"),
               trailing: Icon(Icons.edit),
             )
           ],
