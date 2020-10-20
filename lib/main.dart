@@ -21,9 +21,8 @@ class HomePage extends StatelessWidget {
       ),
       body: Container(
         color: Colors.teal,
-        height: 500,
-        width: 300,
-        child: Column(
+        height: 100,
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisSize: MainAxisSize.max,
