@@ -19,37 +19,50 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("App"),
       ),
-      body: Container(
-        color: Colors.teal,
-        height: 100,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisSize: MainAxisSize.max,
+      body: Center(
+        child: Container(
+          color: Colors.teal,
+          height: 100,
+          width: 100,
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: const EdgeInsets.all(0),
           children: <Widget>[
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.red,
-              padding: const EdgeInsets.all(8),
-              alignment: Alignment.center,
+//            DrawerHeader(
+//              child: Text("I am Drawer"),
+//              decoration: BoxDecoration(color:Colors.purple),
+//            ),
+
+            UserAccountsDrawerHeader(
+              accountName: Text("ABC"),
+              accountEmail: Text("ABC@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: NetworkImage(
+                    "https://codersera.com/blog/wp-content/uploads/2019/07/BLOG-23-L-3.jpg"),
+              ),
             ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.yellow,
-              padding: const EdgeInsets.all(8),
-              alignment: Alignment.center,
+
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("ABC"),
+              subtitle: Text("Developer"),
+              trailing: Icon(Icons.edit),
+              onTap: () {},
             ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.green,
-              padding: const EdgeInsets.all(8),
-              alignment: Alignment.center,
-            ),
+            ListTile(
+              leading: Icon(Icons.email),
+              title: Text("Email"),
+              subtitle: Text("iomkarsurve@gmail.com"),
+              trailing: Icon(Icons.edit),
+            )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.edit),
       ),
     );
   }
