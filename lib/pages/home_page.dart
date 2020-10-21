@@ -42,6 +42,8 @@ class _HomePageState extends State<HomePage> {
       ),
       body: data != null
           ? ListView.builder(
+              //GridView.builder(
+              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: ),
               itemBuilder: (context, index) {
                 return ListTile(
                   title: Text(data[index]["title"]),
